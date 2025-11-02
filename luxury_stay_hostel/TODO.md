@@ -7,7 +7,13 @@
 - [x] Plan how to translate HTML/CSS/JS to Streamlit (st.markdown, st.columns, custom CSS)
 
 ## Phase 2: Backend Enhancements for Production Readiness
-- [ ] Add user authentication (JWT-based) to backend
+- [x] Add user authentication (JWT-based) to backend
+  - [x] Add User model to models.py
+  - [x] Add User schemas to schemas.py
+  - [x] Add User CRUD functions to crud.py
+  - [x] Create auth.py with JWT utilities
+  - [x] Update main.py with auth routes and protect endpoints
+  - [x] Add dependencies to requirements.txt
 - [ ] Add more API endpoints: search properties, create bookings, user dashboards
 - [ ] Enhance models: Add more fields (images, amenities, reviews)
 - [ ] Add proper error handling and validation
@@ -15,7 +21,7 @@
 - [ ] Update database schema for production (foreign keys, indexes)
 
 ## Phase 3: Frontend Redesign (Streamlit App)
-- [ ] Redesign homepage to match Stitch: hero, search, featured listings, testimonials
+- [x] Redesign homepage to match Stitch: hero, search, featured listings, testimonials
 - [ ] Create search results page with filters and property cards
 - [ ] Create listing details page with image gallery, amenities, reviews, booking form
 - [ ] Create tenant dashboard: sidebar nav, stats, bookings, payments

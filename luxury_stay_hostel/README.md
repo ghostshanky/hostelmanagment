@@ -14,6 +14,7 @@ A modern, full-stack hostel management system designed for seamless tenant exper
 - **Contact Us**: Get in touch with management
 
 ### Backend (FastAPI)
+- **User Authentication**: JWT-based login and registration
 - **Tenant Management**: CRUD operations for tenant profiles
 - **Booking System**: Handle reservations with date validation
 - **Invoice Generation**: Automated billing and status tracking
@@ -25,7 +26,8 @@ A modern, full-stack hostel management system designed for seamless tenant exper
 - **Frontend**: Streamlit application for user interface
 - **Backend**: FastAPI REST API with Pydantic schemas
 - **Database**: SQLite with SQLAlchemy ORM
-- **Models**: Tenant, Booking, Invoice entities with relationships
+- **Authentication**: JWT tokens with bcrypt password hashing
+- **Models**: User, Tenant, Booking, Invoice entities with relationships
 
 ## Installation
 
@@ -57,7 +59,7 @@ A modern, full-stack hostel management system designed for seamless tenant exper
 
 1. **Start the Backend API**:
    ```bash
-   uvicorn backend.main:app --reload
+   python -m uvicorn backend.main:app --reload
    ```
    The API will be available at `http://localhost:8000`
 
@@ -69,17 +71,32 @@ A modern, full-stack hostel management system designed for seamless tenant exper
 
 ### API Endpoints
 
-- `GET /` - API root
+#### Authentication
+- `POST /auth/register` - Register a new user
+- `POST /auth/login` - Login and get access token
+
+#### Tenants
 - `POST /tenants/` - Create tenant
 - `GET /tenants/` - List all tenants
 - `GET /tenants/{id}` - Get tenant by ID
+
+#### Bookings
 - `POST /bookings/` - Create booking
 - `GET /bookings/` - List all bookings
 - `GET /bookings/{id}` - Get booking by ID
+
+#### Invoices
 - `POST /invoices/` - Create invoice
 - `GET /invoices/` - List all invoices
 
 ## Database Schema
+
+### User
+- id: Primary key
+- username: Unique username
+- email: Unique email address
+- hashed_password: Bcrypt hashed password
+- is_active: Account status
 
 ### Tenant
 - id: Primary key
@@ -119,10 +136,12 @@ luxury_stay_hostel/
 │   ├── models.py         # SQLAlchemy models
 │   ├── schemas.py        # Pydantic schemas
 │   ├── crud.py           # Database operations
+│   ├── auth.py           # Authentication utilities
 │   └── database.py       # Database configuration
 ├── requirements.txt       # Python dependencies
 ├── README.md             # This file
-└── TODO.md               # Development tasks
+├── TODO.md               # Development tasks
+└── hostel.db             # SQLite database
 ```
 
 ### Contributing

@@ -1,6 +1,19 @@
 from sqlalchemy.orm import Session
 from . import models
 
+def create_user(db: Session, user_data: dict):
+    user = models.User(**user_data)
+    db.add(user)
+    db.commit()
+    db.refresh(user)
+    return user
+
+def get_user_by_username(db: Session, username: str):
+    return db.query(models.User).filter(models.User.username == username).first()
+
+def get_user_by_email(db: Session, email: str):
+    return db.query(models.User).filter(models.User.email == email).first()
+
 def create_tenant(db: Session, tenant_data: dict):
     tenant = models.Tenant(**tenant_data)
     db.add(tenant)
