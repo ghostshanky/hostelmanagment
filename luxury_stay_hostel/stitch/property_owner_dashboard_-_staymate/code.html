@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Property Owner Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#007BFF",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101a22",
+                        "success": "#28A745",
+                        "warning": "#FFC107",
+                        "error": "#DC3545",
+                        "text-light-primary": "#111518",
+                        "text-light-secondary": "#617989",
+                        "text-dark-primary": "#f6f7f8",
+                        "text-dark-secondary": "#a0aec0",
+                        "border-light": "#dbe1e6",
+                        "border-dark": "#2d3748",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2a38"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="flex-shrink-0 w-64 bg-surface-light dark:bg-surface-dark border-r border-border-light dark:border-border-dark flex flex-col justify-between p-4">
+<div class="flex flex-col gap-8">
+<div class="flex items-center gap-2 px-2">
+<span class="material-symbols-outlined text-primary text-3xl"> real_estate_agent </span>
+<h1 class="text-text-light-primary dark:text-text-dark-primary text-xl font-bold">Stays.io</h1>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary" href="#">
+<span class="material-symbols-outlined text-2xl"> dashboard </span>
+<p class="text-sm font-bold leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary/10 hover:text-primary transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-2xl"> apartment </span>
+<p class="text-sm font-medium leading-normal">My Listings</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary/10 hover:text-primary transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-2xl"> calendar_month </span>
+<p class="text-sm font-medium leading-normal">Bookings</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary/10 hover:text-primary transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-2xl"> credit_card </span>
+<p class="text-sm font-medium leading-normal">Payments</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary/10 hover:text-primary transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-2xl"> chat </span>
+<p class="text-sm font-medium leading-normal">Messages</p>
+</a>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary/10 hover:text-primary transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-2xl"> settings </span>
+<p class="text-sm font-medium leading-normal">Settings</p>
+</a>
+<div class="flex gap-3 p-2 border-t border-border-light dark:border-border-dark pt-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Profile picture of Alex Chen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBCww12N-2nPUNW7Vji6RkWmDdh9cAneatYcHKdwW0EhJ1FB9M58r70mSUGzmzBA6GyjsdkQsZ1bGKTEk9D_SibO_HzfdfL_8LcG9a_XSaKoS6n1r-9qIeU5C8b4qlC3m6cFL7EpKsrqQQypMrJr6vqumO7TBcHJnMHIVDJBoCiuOzXmrjIK_-Dkwu2-Us_amVBha6dQXaiFoggOibGhI5eLN3BiRyuG1i_aXkTKQLHEU3MSwS1AAqO4Ou9bhjhGI34P6xdUUMW_kw");'></div>
+<div class="flex flex-col">
+<h1 class="text-text-light-primary dark:text-text-dark-primary text-sm font-semibold leading-normal">Alex Chen</h1>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-xs font-normal leading-normal">Property Owner</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-8 overflow-y-auto">
+<div class="mx-auto max-w-7xl">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between items-center gap-4 mb-8">
+<div class="flex flex-col gap-2">
+<p class="text-text-light-primary dark:text-text-dark-primary text-3xl font-bold leading-tight tracking-tight">Welcome back, Alex!</p>
+<p class="text-text-light-secondary dark:text-text-dark-secondary text-base font-normal leading-normal">Here’s a summary of your property performance.</p>
+</div>
+<button class="flex items-center justify-center gap-2 overflow-hidden rounded-lg h-11 px-6 bg-primary text-white text-sm font-bold leading-normal tracking-wide shadow-sm hover:bg-primary/90 transition-colors duration-200">
+<span class="material-symbols-outlined">add_circle</span> <span class="truncate">Add New Listing</span>
+</button>
+</div>
+<!-- Stats -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark shadow-sm">
+<p class="text-text-light-primary dark:text-text-dark-primary text-base font-medium leading-normal">Total Earnings</p>
+<p class="text-text-light-primary dark:text-text-dark-primary tracking-light text-3xl font-bold leading-tight">$12,450</p>
+<p class="text-success text-sm font-semibold leading-normal flex items-center gap-1">
+<span class="material-symbols-outlined text-base">arrow_upward</span>
+<span>+5.2%</span>
+</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark shadow-sm">
+<p class="text-text-light-primary dark:text-text-dark-primary text-base font-medium leading-normal">New Booking Requests</p>
+<p class="text-text-light-primary dark:text-text-dark-primary tracking-light text-3xl font-bold leading-tight">3</p>
+<p class="text-warning text-sm font-semibold leading-normal flex items-center gap-1">
+<span class="material-symbols-outlined text-base">arrow_upward</span>
+<span>+1 from yesterday</span>
+</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark shadow-sm">
+<p class="text-text-light-primary dark:text-text-dark-primary text-base font-medium leading-normal">Occupancy Rate</p>
+<p class="text-text-light-primary dark:text-text-dark-primary tracking-light text-3xl font-bold leading-tight">85%</p>
+<p class="text-error text-sm font-semibold leading-normal flex items-center gap-1">
+<span class="material-symbols-outlined text-base">arrow_downward</span>
+<span>-1.5%</span>
+</p>
+</div>
+</div>
+<!-- Section: My Listings -->
+<div class="flex flex-col gap-4">
+<!-- SectionHeader & SearchBar -->
+<div class="flex flex-wrap justify-between items-center gap-4">
+<h2 class="text-text-light-primary dark:text-text-dark-primary text-xl font-bold leading-tight tracking-tight">My Listings</h2>
+<div class="w-full sm:w-72">
+<label class="flex flex-col h-11 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-text-light-secondary dark:text-text-dark-secondary flex bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light-primary dark:text-text-dark-primary focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark h-full placeholder:text-text-light-secondary dark:placeholder:text-text-dark-secondary px-4 rounded-l-none border-l-0 pl-2 text-sm font-normal leading-normal" placeholder="Search listings..." value=""/>
+</div>
+</label>
+</div>
+</div>
+<!-- Listings Table -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-border-light dark:border-border-dark shadow-sm overflow-x-auto">
+<table class="w-full text-sm text-left">
+<thead class="text-xs text-text-light-secondary dark:text-text-dark-secondary uppercase bg-background-light dark:bg-background-dark">
+<tr>
+<th class="px-6 py-4 font-semibold" scope="col">Property</th>
+<th class="px-6 py-4 font-semibold" scope="col">Location</th>
+<th class="px-6 py-4 font-semibold" scope="col">Status</th>
+<th class="px-6 py-4 font-semibold text-center" scope="col">Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-border-light dark:border-border-dark">
+<td class="px-6 py-4 font-medium text-text-light-primary dark:text-text-dark-primary whitespace-nowrap">
+<div class="flex items-center gap-4">
+<div class="w-20 h-14 rounded-lg bg-cover bg-center" data-alt="Modern hostel room with bunk beds" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDuNwHQQj0J24TfToBT_OEbFrs_Ql68Lp4loE2pthwKMuSZ-kg6e346MqvpUtLzC5e7ut7ta8Y0XMwNbAnu2N-Of4NVoTaWjt4H2P3RNpBhwOZD6LDWvURHB0p14LrOks_K6yI-c5eJoiYdny9tA91K9zyNOiQ49VAyRxT67AEU3URvLqohrbVuxhgYVN2mKOpohTZO0tftPDk5XGoiDNgXqHnl3Jy6WM3DdkKfqq189M1WVHzcJP_-I5q3RrRzktJPZN8QopHgj9A')"></div>
+<div class="flex flex-col">
+<span class="font-bold">Sunnyvale Student Hostel</span>
+<span class="text-xs text-text-light-secondary dark:text-text-dark-secondary">4 Beds | Shared Room</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-text-light-secondary dark:text-text-dark-secondary">Mumbai, India</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-3 py-1 text-xs font-semibold rounded-full bg-success/10 text-success">
+                                                Listed
+                                            </span>
+</td>
+<td class="px-6 py-4 text-center">
+<div class="flex items-center justify-center gap-2">
+<button aria-label="Edit Listing" class="p-2 rounded-md hover:bg-primary/10 text-text-light-secondary dark:text-text-dark-secondary hover:text-primary transition-colors duration-200"><span class="material-symbols-outlined text-xl">edit</span></button>
+<button aria-label="View Calendar" class="p-2 rounded-md hover:bg-primary/10 text-text-light-secondary dark:text-text-dark-secondary hover:text-primary transition-colors duration-200"><span class="material-symbols-outlined text-xl">calendar_today</span></button>
+<button aria-label="Deactivate Listing" class="p-2 rounded-md hover:bg-error/10 text-text-light-secondary dark:text-text-dark-secondary hover:text-error transition-colors duration-200"><span class="material-symbols-outlined text-xl">toggle_off</span></button>
+</div>
+</td>
+</tr>
+<tr class="border-b border-border-light dark:border-border-dark">
+<td class="px-6 py-4 font-medium text-text-light-primary dark:text-text-dark-primary whitespace-nowrap">
+<div class="flex items-center gap-4">
+<div class="w-20 h-14 rounded-lg bg-cover bg-center" data-alt="Cozy private room with a single bed and desk" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAdKFrqypQ6r3RoWjZyPtFYMe01bG8gOc7VCXS7x4juwcLmBLR6xivoAfNbPZNmutLy0j3i2aaOPg58nVypxAjoWb5_Dm5hDrDRj047wJRYUPUJnMwC0io9bEvEzwHrq4tZURUwOENPALmBrygDBeYCGjDlHH0wuiBzlW2ZdCLo9ttVQvWhal5jgSB1Rv4eIePv3-2L5tn5eXO_zRXm2sdkp2EkVnzXEQqDMz5bU4idPW4bzrfr-7HIHcxD8CTlN-DonhCLh4SRLEg')"></div>
+<div class="flex flex-col">
+<span class="font-bold">Tech Park Co-Living</span>
+<span class="text-xs text-text-light-secondary dark:text-text-dark-secondary">1 Bed | Private Room</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-text-light-secondary dark:text-text-dark-secondary">Bangalore, India</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-3 py-1 text-xs font-semibold rounded-full bg-success/10 text-success">
+                                                Listed
+                                            </span>
+</td>
+<td class="px-6 py-4 text-center">
+<div class="flex items-center justify-center gap-2">
+<button aria-label="Edit Listing" class="p-2 rounded-md hover:bg-primary/10 text-text-light-secondary dark:text-text-dark-secondary hover:text-primary transition-colors duration-200"><span class="material-symbols-outlined text-xl">edit</span></button>
+<button aria-label="View Calendar" class="p-2 rounded-md hover:bg-primary/10 text-text-light-secondary dark:text-text-dark-secondary hover:text-primary transition-colors duration-200"><span class="material-symbols-outlined text-xl">calendar_today</span></button>
+<button aria-label="Deactivate Listing" class="p-2 rounded-md hover:bg-error/10 text-text-light-secondary dark:text-text-dark-secondary hover:text-error transition-colors duration-200"><span class="material-symbols-outlined text-xl">toggle_off</span></button>
+</div>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 font-medium text-text-light-primary dark:text-text-dark-primary whitespace-nowrap">
+<div class="flex items-center gap-4">
+<div class="w-20 h-14 rounded-lg bg-cover bg-center" data-alt="Dormitory room with multiple bunk beds" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDCl9sAugAzGQ1Uy0QxJYbmaf-szg_xHWSxEQZEo5LLFv_1VZKgZzmzchn-sxyNEmsna3RbDLMsC8W5dmxoZOEtD0wGLMeKKbaBuVob60z4a6bVME-RLjCMPuwPbhgf5tS0IXLH7i8yvfbJ5MTN_lA2Fkmh319BW2bq3zfOzrDPV2Fe_tcRS9BipnnKHO1hPqv8NmfEVs_fPO0xWeQxWJRkUauJrMYDZ1Zm5toMBkNzQFfR9AhFam9TfaslEfWPnArKCkHRGbmc9dQ')"></div>
+<div class="flex flex-col">
+<span class="font-bold">Downtown PG Stay</span>
+<span class="text-xs text-text-light-secondary dark:text-text-dark-secondary">8 Beds | Dorm Room</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-text-light-secondary dark:text-text-dark-secondary">Delhi, India</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-3 py-1 text-xs font-semibold rounded-full bg-text-light-secondary/10 text-text-light-secondary dark:bg-text-dark-secondary/10 dark:text-text-dark-secondary">
+                                                Unlisted
+                                            </span>
+</td>
+<td class="px-6 py-4 text-center">
+<div class="flex items-center justify-center gap-2">
+<button aria-label="Edit Listing" class="p-2 rounded-md hover:bg-primary/10 text-text-light-secondary dark:text-text-dark-secondary hover:text-primary transition-colors duration-200"><span class="material-symbols-outlined text-xl">edit</span></button>
+<button aria-label="View Calendar" class="p-2 rounded-md hover:bg-primary/10 text-text-light-secondary dark:text-text-dark-secondary hover:text-primary transition-colors duration-200"><span class="material-symbols-outlined text-xl">calendar_today</span></button>
+<button aria-label="Activate Listing" class="p-2 rounded-md hover:bg-success/10 text-text-light-secondary dark:text-text-dark-secondary hover:text-success transition-colors duration-200"><span class="material-symbols-outlined text-xl">toggle_on</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

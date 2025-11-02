@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StayEasy - Confirm and Pay</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#2b9dee",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101a22",
+              "success": "#28a745"
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.5rem",
+              "lg": "0.75rem",
+              "xl": "1rem",
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#111518] dark:text-gray-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-gray-200 dark:border-b-gray-800 px-4 sm:px-10 py-4 w-full">
+<div class="flex items-center gap-4 text-[#111518] dark:text-white">
+<div class="text-primary size-7">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em]">StayEasy</h2>
+</div>
+<div class="flex flex-1 justify-end gap-4 sm:gap-6 items-center">
+<div class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Explore</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">My Bookings</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Help</a>
+</div>
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAHjmVD1AHPKBt3XLqJoGy47Y-obbJn5yobmQ-KDV-CGrJjOoEv6wjUdrBYB2eHZR2wlp9TaaVE3x4EfulAyTpPnj7I4-L6NxThL481gTBsyr1n6K2-cJ6dPrEuEriKkgf3gjbIBjbEygNMKRRFMw1zC1OJ82g5QvO_8eL9rJIH7On7lcNzL3xeSOFK6S3lOll9re2nW71a3NIG1J5VIBpg1Jh-3Hmd0dA5LyWheiiBlAkvQJkebejsOTioVSQzbQxQK0gUEDjCxTY");'></div>
+</div>
+</header>
+<main class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+<div class="flex flex-wrap justify-between gap-3 mb-8">
+<h1 class="text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em] min-w-72 text-gray-900 dark:text-white">Confirm and pay</h1>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
+<!-- Left Column -->
+<div class="lg:col-span-3 flex flex-col gap-8">
+<!-- Booking Summary Card -->
+<div class="p-6 bg-white dark:bg-background-dark rounded-xl border border-gray-200 dark:border-gray-800">
+<div class="flex items-start justify-between gap-4">
+<div class="flex flex-col gap-1 flex-grow">
+<p class="text-sm font-normal leading-normal text-gray-500 dark:text-gray-400">Private Room in Hostel</p>
+<p class="text-lg font-bold leading-tight text-gray-900 dark:text-white">The Student Hub, Koramangala</p>
+<p class="text-sm font-normal leading-normal text-gray-500 dark:text-gray-400 mt-1">456, 7th Main Rd, 4th Block, Koramangala, Bengaluru, Karnataka 560034</p>
+</div>
+<div class="w-28 h-20 sm:w-36 sm:h-24 bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-shrink-0" data-alt="Exterior view of The Student Hub hostel" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCgQGE7izJcR3jwda1gG0-HCkSl2okTfgEZxI1c7CNx_C-PmYGbbM26pDceT-XQUyW3IdmCZC6INFRRYN_g8dPqboFNYWqdtFxT7S5eGE07c_QnnEu5rlFqHCcqtYMqat8hxoPTOCTpPNCBmm6HeAuT0piB4LLcNLh-GmYb7ocxt5IFaTj4gRbLuTgd1T6jcoGIR4BhznyZfIGyDeng9fhkdL0UgEg3amjYW1IbvqOOBbFrB0Y9WI-lxxb8tvYEhf11Bs98h2Ar5yI");'></div>
+</div>
+<div class="mt-6 pt-6 border-t border-solid border-gray-200 dark:border-gray-700">
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em] mb-4 text-gray-900 dark:text-white">Your trip</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1">
+<p class="text-sm font-medium leading-normal text-gray-500 dark:text-gray-400">Dates</p>
+<p class="text-base font-semibold leading-normal text-gray-800 dark:text-gray-200">Sep 1 - Sep 30, 2024</p>
+</div>
+<div class="flex flex-col gap-1">
+<p class="text-sm font-medium leading-normal text-gray-500 dark:text-gray-400">Guests</p>
+<p class="text-base font-semibold leading-normal text-gray-800 dark:text-gray-200">1 guest</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Payment Form -->
+<div class="flex flex-col gap-6">
+<h2 class="text-2xl font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-white">Pay with</h2>
+<div class="flex items-center gap-2 border-b border-gray-200 dark:border-gray-700">
+<button class="py-2 px-4 text-sm font-semibold border-b-2 border-primary text-primary">Credit/Debit Card</button>
+<button class="py-2 px-4 text-sm font-semibold text-gray-500 hover:text-gray-800 dark:hover:text-gray-200">UPI</button>
+<button class="py-2 px-4 text-sm font-semibold text-gray-500 hover:text-gray-800 dark:hover:text-gray-200">Net Banking</button>
+</div>
+<form class="space-y-4">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="card-number">Card Number</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">credit_card</span>
+<input class="w-full pl-10 pr-3 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-primary focus:border-primary bg-white dark:bg-gray-900" id="card-number" placeholder="0000 0000 0000 0000" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="expiry-date">Expiry Date</label>
+<input class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-primary focus:border-primary bg-white dark:bg-gray-900" id="expiry-date" placeholder="MM / YY" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="cvv">CVV</label>
+<input class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-primary focus:border-primary bg-white dark:bg-gray-900" id="cvv" placeholder="123" type="text"/>
+</div>
+</div>
+<div class="flex items-center">
+<input class="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded" id="save-card" name="save-card" type="checkbox"/>
+<label class="ml-2 block text-sm text-gray-900 dark:text-gray-300" for="save-card">Save card for future use</label>
+</div>
+</form>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined text-base text-success">lock</span>
+<p>This is a secure 256-bit SSL encrypted payment.</p>
+</div>
+</div>
+<!-- Cancellation Policy -->
+<div>
+<h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Cancellation Policy</h3>
+<p class="text-sm text-gray-600 dark:text-gray-400">Free cancellation before 12:00 PM on Aug 30. After that, cancel before 12:00 PM on Sep 1 for a partial refund. <a class="text-primary font-semibold underline" href="#">Learn more</a></p>
+</div>
+<div class="pt-6 border-t border-gray-200 dark:border-gray-700">
+<button class="w-full flex items-center justify-center gap-2 rounded-lg h-12 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined">verified_user</span>
+                                Confirm and Pay
+                            </button>
+</div>
+</div>
+<!-- Right Column -->
+<div class="lg:col-span-2">
+<div class="sticky top-12 p-6 bg-white dark:bg-background-dark rounded-xl border border-gray-200 dark:border-gray-800 flex flex-col gap-6">
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-white">Price details</h2>
+<div class="flex flex-col gap-3 text-sm">
+<div class="flex justify-between items-center text-gray-700 dark:text-gray-300">
+<p>₹12,000 x 1 month</p>
+<p>₹12,000</p>
+</div>
+<div class="flex justify-between items-center text-gray-700 dark:text-gray-300">
+<p>Service fee</p>
+<p>₹500</p>
+</div>
+<div class="flex justify-between items-center text-gray-700 dark:text-gray-300">
+<p>Taxes</p>
+<p>₹2,160</p>
+</div>
+</div>
+<div class="flex justify-between items-center border-t border-gray-200 dark:border-gray-700 pt-4">
+<p class="text-base font-bold text-gray-900 dark:text-white">Total (INR)</p>
+<p class="text-base font-bold text-gray-900 dark:text-white">₹14,660</p>
+</div>
+<!-- Host Info -->
+<div class="mt-4 pt-6 border-t border-gray-200 dark:border-gray-700">
+<h3 class="text-lg font-bold mb-4 text-gray-900 dark:text-white">Meet your host</h3>
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-14" data-alt="Profile picture of the host, Priya" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDwP5tectrs4ndIek8_ZXFIrBqvRs3BILsZKiwZmsWyb5TneRt6tc3vvo2L9fIbeaBn3YZrZ-8OzVcBZ1jlLbPMJvRl6LWiKEDOYXld8CtsN5hrvVeTROMltdFwqLsRF9gYhOPzHtE5cRXLOfRl_vNE_2ZafyVOi7cxCBgj87GCxIN8L0p37mTSZCi8AYcNiC4MeeuPEhD6klJ1ZIsZmTKpuox3lKsugItNlmY0H_BKX3wGSqtHC1U5Cq141tdIU3rKQAweqCEcRLk");'></div>
+<div class="flex-1">
+<p class="font-bold text-gray-800 dark:text-gray-200">Priya Sharma</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Joined in 2022</p>
+</div>
+<button class="flex items-center justify-center rounded-lg h-10 px-4 bg-gray-100 dark:bg-gray-800 text-sm font-semibold text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                                        Message Host
+                                    </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

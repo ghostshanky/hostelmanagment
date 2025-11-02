@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BudgetStays - Search Results</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#2b9dee",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101a22",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    /* Custom scrollbar for better aesthetics */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #cbd5e1; /* cool-gray-300 */
+      border-radius: 20px;
+    }
+    .dark ::-webkit-scrollbar-thumb {
+      background-color: #475569; /* cool-gray-600 */
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111518] dark:text-gray-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<header class="sticky top-0 z-20 w-full flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-gray-800 px-4 sm:px-6 lg:px-10 py-3 bg-white/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-3xl"> real_estate_agent </span>
+<h2 class="text-[#111518] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">BudgetStays</h2>
+</div>
+<div class="hidden md:flex items-center gap-9">
+<a class="text-[#111518] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="#">List your property</a>
+<a class="text-[#111518] dark:text-gray-300 text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="#">Help</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-2 sm:gap-4 items-center">
+<label class="hidden sm:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-gray-500 dark:text-gray-400 flex bg-gray-100 dark:bg-gray-800 items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined"> search </span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111518] dark:text-gray-200 focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-gray-100 dark:bg-gray-800 h-full placeholder:text-gray-500 dark:placeholder:text-gray-400 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search..." value=""/>
+</div>
+</label>
+<div class="flex gap-2">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Log In</span>
+</button>
+<button class="hidden sm:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gray-100 dark:bg-gray-800 text-[#111518] dark:text-gray-200 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+<span class="truncate">Sign Up</span>
+</button>
+</div>
+</div>
+</header>
+<main class="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 py-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Filter Sidebar -->
+<aside class="lg:col-span-4 xl:col-span-3">
+<div class="sticky top-24">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-bold text-[#111518] dark:text-white">Filters</h3>
+<button class="text-sm font-medium text-primary hover:underline">Clear all</button>
+</div>
+<div class="space-y-6 bg-white dark:bg-gray-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800">
+<!-- Price Range -->
+<div>
+<h4 class="font-bold mb-3 text-[#111518] dark:text-gray-200">Price Range</h4>
+<div class="relative h-1 w-full rounded-full bg-gray-200 dark:bg-gray-700">
+<div class="absolute h-1 rounded-full bg-primary" style="left: 10%; right: 40%;"></div>
+<div class="absolute -top-1.5 h-4 w-4 rounded-full bg-primary border-2 border-white dark:border-gray-900 cursor-pointer" style="left: 10%;"></div>
+<div class="absolute -top-1.5 h-4 w-4 rounded-full bg-primary border-2 border-white dark:border-gray-900 cursor-pointer" style="right: 40%;"></div>
+</div>
+<div class="flex justify-between text-sm text-gray-600 dark:text-gray-400 mt-2">
+<span>₹5,000</span>
+<span>₹20,000</span>
+</div>
+</div>
+<div class="border-t border-gray-200 dark:border-gray-700"></div>
+<!-- Room Type -->
+<div>
+<h4 class="font-bold mb-3 text-[#111518] dark:text-gray-200">Room Type</h4>
+<div class="space-y-2">
+<label class="flex items-center">
+<input checked="" class="form-checkbox h-5 w-5 rounded text-primary bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 focus:ring-primary/50" type="checkbox"/>
+<span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Shared Room</span>
+</label>
+<label class="flex items-center">
+<input class="form-checkbox h-5 w-5 rounded text-primary bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 focus:ring-primary/50" type="checkbox"/>
+<span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Private Room</span>
+</label>
+</div>
+</div>
+<div class="border-t border-gray-200 dark:border-gray-700"></div>
+<!-- Gender -->
+<div>
+<h4 class="font-bold mb-3 text-[#111518] dark:text-gray-200">Gender</h4>
+<div class="space-y-2">
+<label class="flex items-center">
+<input class="form-checkbox h-5 w-5 rounded text-primary bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 focus:ring-primary/50" type="checkbox"/>
+<span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Boys</span>
+</label>
+<label class="flex items-center">
+<input checked="" class="form-checkbox h-5 w-5 rounded text-primary bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 focus:ring-primary/50" type="checkbox"/>
+<span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Girls</span>
+</label>
+<label class="flex items-center">
+<input class="form-checkbox h-5 w-5 rounded text-primary bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 focus:ring-primary/50" type="checkbox"/>
+<span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Co-ed</span>
+</label>
+</div>
+</div>
+<div class="border-t border-gray-200 dark:border-gray-700"></div>
+<!-- Amenities -->
+<div>
+<h4 class="font-bold mb-3 text-[#111518] dark:text-gray-200">Amenities</h4>
+<div class="space-y-2">
+<label class="flex items-center">
+<input checked="" class="form-checkbox h-5 w-5 rounded text-primary bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 focus:ring-primary/50" type="checkbox"/>
+<span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Wi-Fi</span>
+</label>
+<label class="flex items-center">
+<input checked="" class="form-checkbox h-5 w-5 rounded text-primary bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 focus:ring-primary/50" type="checkbox"/>
+<span class="ml-2 text-sm text-gray-700 dark:text-gray-300">AC</span>
+</label>
+<label class="flex items-center">
+<input class="form-checkbox h-5 w-5 rounded text-primary bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 focus:ring-primary/50" type="checkbox"/>
+<span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Kitchen</span>
+</label>
+<label class="flex items-center">
+<input class="form-checkbox h-5 w-5 rounded text-primary bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 focus:ring-primary/50" type="checkbox"/>
+<span class="ml-2 text-sm text-gray-700 dark:text-gray-300">Laundry</span>
+</label>
+</div>
+</div>
+<button class="w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] mt-4 hover:bg-primary/90 transition-colors">
+<span class="truncate">Apply Filters</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- Listings Content -->
+<div class="lg:col-span-8 xl:col-span-9">
+<!-- Heading & Sorter -->
+<div class="flex flex-wrap justify-between items-center gap-4 mb-6">
+<p class="text-[#111518] dark:text-white text-2xl sm:text-3xl font-black leading-tight tracking-[-0.033em] min-w-72">300+ stays in Mumbai</p>
+<div class="flex items-center gap-4">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 px-4">
+<p class="text-[#111518] dark:text-gray-200 text-sm font-medium leading-normal">Sort by: Popularity</p>
+<span class="material-symbols-outlined text-[#111518] dark:text-gray-200 text-lg"> expand_more </span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary text-white px-4">
+<span class="material-symbols-outlined text-white text-lg"> map </span>
+<p class="text-sm font-medium leading-normal">Map</p>
+</button>
+</div>
+</div>
+<!-- Listings Grid -->
+<div class="grid grid-cols-1 @md:grid-cols-2 @4xl:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="relative w-full overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-xl transition-transform duration-300 group-hover:scale-105" data-alt="Bright and airy shared room with bunk beds" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBuf3ytkxTOxPWPinQq4OzWuo2Jgztap9Jbj5roahI3J8RaA4U-kVex9oDU2ohN30YXGXJqD5xjTIfvZBrJBFMKmqlK8iha6G1zvsNsZP-TpPgA9xnwFnlmbBL0GcIsQlSGjDF_IgqLBPvsdWyYFdhhrCsrhKntkjB5Z7ab32hSCZFFE6mFvBMAnhQd3Ju6UKKZruTOk0t8JGauTJEEKEPFck1nciDPNzKbDg_pFPvLj3wlaa5F6Uj-K21yxUzAAiVjvA5yVC8_mhI");'></div>
+<button class="absolute top-3 right-3 text-white">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24"> favorite </span>
+</button>
+</div>
+<div>
+<div class="flex justify-between items-start">
+<p class="text-[#111518] dark:text-white text-base font-bold leading-normal">Cozy Shared Room near University</p>
+<div class="flex items-center gap-1 text-[#111518] dark:text-gray-300">
+<span class="material-symbols-outlined text-lg text-amber-500" style="font-variation-settings: 'FILL' 1"> star </span>
+<span class="text-sm font-medium">4.8</span>
+</div>
+</div>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">Koramangala, Bangalore</p>
+<p class="text-[#111518] dark:text-white text-sm font-semibold leading-normal mt-1">₹8,500 <span class="font-normal text-gray-600 dark:text-gray-400">/ month</span></p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="relative w-full overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-xl transition-transform duration-300 group-hover:scale-105" data-alt="Modern private room with a desk and chair" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDYsdPENLfpxrrGmVqommjHYQ4CrbbA8BPbHxLhm0fkuXnIrs400RxushY9cZB_3mI2Li5T17GbgUzKxj5_F4LE0DnqttJ9iRBfP8jY4H7nVbNUmcv1KxX64dWGMGZeFCKB8Zix1VgXTbpRNODR6bLvK195MHkbEpk2doTar7t2qf-CNfYRzejd7NIzKjKJ5eiUpBIYZ9BjaykYL7dI1PhsgcRtnwAfOyg02qY8x2hHPD-ZGVCK9nFbsPz9NEilHB1ZJfgRIuCo40U");'></div>
+<button class="absolute top-3 right-3 text-white">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24"> favorite </span>
+</button>
+</div>
+<div>
+<div class="flex justify-between items-start">
+<p class="text-[#111518] dark:text-white text-base font-bold leading-normal">Modern PG for Professionals</p>
+<div class="flex items-center gap-1 text-[#111518] dark:text-gray-300">
+<span class="material-symbols-outlined text-lg text-amber-500" style="font-variation-settings: 'FILL' 1"> star </span>
+<span class="text-sm font-medium">4.5</span>
+</div>
+</div>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">Hiranandani, Mumbai</p>
+<p class="text-[#111518] dark:text-white text-sm font-semibold leading-normal mt-1">₹15,000 <span class="font-normal text-gray-600 dark:text-gray-400">/ month</span></p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="relative w-full overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-xl transition-transform duration-300 group-hover:scale-105" data-alt="Clean student hostel with multiple beds in a row" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAreYgVizj5dEvN_Jz5B-mvKKOSrGRUPzQSQFmf1Rqxkh6E3NSrW9go3sIbCPxw6DD4yBCqivdhf98XZ2S9D-2Vbqsf3zheO7U_ycLu5B1KSu2lDpj--Qo943KQX7N6_dot-jxESjcA_4urxEox3k4KyOPRh4XakpkuqRjxYnB17lWEN_kr5vLzFHZq8CUCL4rRUEtoMpCPS7Mypibnh3lTih03_VugbRddk07cvSIi5r6S9gYaB8cEXvjvUXsvOYg9vz64zqmv5hc");'></div>
+<button class="absolute top-3 right-3 text-white">
+<span class="material-symbols-outlined text-3xl text-red-500" style="font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24"> favorite </span>
+</button>
+</div>
+<div>
+<div class="flex justify-between items-start">
+<p class="text-[#111518] dark:text-white text-base font-bold leading-normal">Affordable Student Hostel</p>
+<div class="flex items-center gap-1 text-[#111518] dark:text-gray-300">
+<span class="material-symbols-outlined text-lg text-amber-500" style="font-variation-settings: 'FILL' 1"> star </span>
+<span class="text-sm font-medium">4.2</span>
+</div>
+</div>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">Kamla Nagar, Delhi</p>
+<p class="text-[#111518] dark:text-white text-sm font-semibold leading-normal mt-1">₹7,000 <span class="font-normal text-gray-600 dark:text-gray-400">/ month</span></p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="relative w-full overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-xl transition-transform duration-300 group-hover:scale-105" data-alt="Private room with a large window showing a city view" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB5brcFUtS4qhWmw3j6IBOdvRNOGDSNZzZ5rZTrxRMoRkPj87Q1Crw6MobE8vgxdrFKzoHmkZ7m_ThLrJaZnSE40IIpKezGVeqH0dv2YODtEmf_qG5QUKBykQ_2E0yHH1yg6tYjfyrd8hLF3XFcTSVKlE6RJnWkRCUUsDRW5S2Fvn6vQnCPLQ4HDGozBfcyGmkL89l7yQAS3nJ-88UZimK5vV3tQuMqcFC8tcyrhiJy-qSBpDxjEob1yV5b99KSxbujszXIL_ojKk0");'></div>
+<button class="absolute top-3 right-3 text-white">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24"> favorite </span>
+</button>
+</div>
+<div>
+<div class="flex justify-between items-start">
+<p class="text-[#111518] dark:text-white text-base font-bold leading-normal">Private Room with City View</p>
+<div class="flex items-center gap-1 text-[#111518] dark:text-gray-300">
+<span class="material-symbols-outlined text-lg text-amber-500" style="font-variation-settings: 'FILL' 1"> star </span>
+<span class="text-sm font-medium">4.9</span>
+</div>
+</div>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">Bandra West, Mumbai</p>
+<p class="text-[#111518] dark:text-white text-sm font-semibold leading-normal mt-1">₹12,000 <span class="font-normal text-gray-600 dark:text-gray-400">/ month</span></p>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="relative w-full overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-xl transition-transform duration-300 group-hover:scale-105" data-alt="Comfortable room for girls with pink and white decor" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBSUC_S2UIj0lbHp6ux2WwqtKHBbf1BjFLvkyHfv1I-SDwMw8woAKopjEZ6YQ6MiJD9eb8p2HbHMvPaQzQP4YIi2zp1pLIWgqZ4eoWg6ja9te96S5ecY5lqQz-DCnlN4qkSQVDqQ0y3IIFb6RYcIKV2o-Ju9JsMOrao5MaUV7_ZzRDMrc4Yw8c0LGyF5Nc1R_aCNNtVGFMefDSjHXU6Ur2OmMUHPkfcpA-dSMlHpcVS03fL6CqtVFF_SfKV2G-j4IYfcTdu5tsynlg");'></div>
+<button class="absolute top-3 right-3 text-white">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24"> favorite </span>
+</button>
+</div>
+<div>
+<div class="flex justify-between items-start">
+<p class="text-[#111518] dark:text-white text-base font-bold leading-normal">Girls Only PG with AC</p>
+<div class="flex items-center gap-1 text-[#111518] dark:text-gray-300">
+<span class="material-symbols-outlined text-lg text-amber-500" style="font-variation-settings: 'FILL' 1"> star </span>
+<span class="text-sm font-medium">4.7</span>
+</div>
+</div>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">Jayanagar, Bangalore</p>
+<p class="text-[#111518] dark:text-white text-sm font-semibold leading-normal mt-1">₹9,500 <span class="font-normal text-gray-600 dark:text-gray-400">/ month</span></p>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="relative w-full overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-xl transition-transform duration-300 group-hover:scale-105" data-alt="Spacious co-ed living area with a sofa and television" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBOGPvyADE297NNCGPo1SM6ZJj6eoUAozmSXLQ4ziQzIebdAGb5T7jRM580nnEBn6NzmNgzpe5hUFAE7FBgFd0cNIPW_b26lcCVlWA2Eq9S0ALObfHXUTvLByGrPf3d3mVYpFUf9118-QfvT-Pog5WbV_FVMo1DUNLH2RosjdIZ4DbYJidDgDHA554rP9t5usrciNxxx7RlZLQDuJPeRk7UWCJSO2UDwQUmeIxmBX-Rx0ZY7ZLIVNmikuRYf4j3jICeQpt7NN3ECZk");'></div>
+<button class="absolute top-3 right-3 text-white">
+<span class="material-symbols-outlined text-3xl text-red-500" style="font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24"> favorite </span>
+</button>
+</div>
+<div>
+<div class="flex justify-between items-start">
+<p class="text-[#111518] dark:text-white text-base font-bold leading-normal">Central Co-ed Living Space</p>
+<div class="flex items-center gap-1 text-[#111518] dark:text-gray-300">
+<span class="material-symbols-outlined text-lg text-amber-500" style="font-variation-settings: 'FILL' 1"> star </span>
+<span class="text-sm font-medium">4.6</span>
+</div>
+</div>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">Andheri, Mumbai</p>
+<p class="text-[#111518] dark:text-white text-sm font-semibold leading-normal mt-1">₹11,000 <span class="font-normal text-gray-600 dark:text-gray-400">/ month</span></p>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex items-center justify-center p-4 mt-8">
+<a class="flex size-10 items-center justify-center text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl"> chevron_left </span>
+</a>
+<a class="text-sm font-bold leading-normal tracking-[0.015em] flex size-10 items-center justify-center text-white dark:text-background-dark rounded-full bg-primary" href="#">1</a>
+<a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-[#111518] dark:text-gray-300 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" href="#">2</a>
+<a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-[#111518] dark:text-gray-300 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" href="#">3</a>
+<span class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-[#111518] dark:text-gray-300 rounded-full">...</span>
+<a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-[#111518] dark:text-gray-300 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" href="#">10</a>
+<a class="flex size-10 items-center justify-center text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl"> chevron_right </span>
+</a>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

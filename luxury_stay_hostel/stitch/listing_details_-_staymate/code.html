@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BudgetStays - Property Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b9dee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101a22",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- TopNavBar Component -->
+<header class="sticky top-0 z-50 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 text-gray-900 dark:text-white">
+<span class="material-symbols-outlined text-primary text-3xl">maps_home_work</span>
+<h2 class="text-xl font-bold">BudgetStays</h2>
+</div>
+</div>
+<div class="hidden md:flex flex-1 justify-center">
+<label class="relative flex items-center w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 text-gray-500">search</span>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-full text-gray-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 h-10 placeholder:text-gray-500 pl-10 pr-4 text-sm font-normal" placeholder="Search for hostels, PGs in your city" value=""/>
+</label>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden lg:block text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium" href="#">List your property</a>
+<button class="flex min-w-[80px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/10 dark:bg-primary/20 text-primary text-sm font-bold hover:bg-primary/20 dark:hover:bg-primary/30">
+<span>Log In</span>
+</button>
+<button class="flex min-w-[80px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-primary/90">
+<span>Sign Up</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<!-- Breadcrumbs Component -->
+<div class="flex flex-wrap gap-2 mb-4">
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary text-sm font-medium" href="#">Home</a>
+<span class="text-gray-500 dark:text-gray-400 text-sm font-medium">/</span>
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary text-sm font-medium" href="#">Mumbai</a>
+<span class="text-gray-500 dark:text-gray-400 text-sm font-medium">/</span>
+<span class="text-gray-800 dark:text-gray-200 text-sm font-medium">Sunnyvale Hostel</span>
+</div>
+<!-- PageHeading Component -->
+<div class="flex flex-wrap justify-between items-start gap-4 mb-6">
+<div class="flex flex-col gap-2">
+<p class="text-gray-900 dark:text-white text-3xl font-bold tracking-tight">Modern &amp; Cozy PG near Andheri West</p>
+<div class="flex items-center gap-4 text-gray-500 dark:text-gray-400 text-sm">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">star</span>
+<span>4.8 (120 Reviews)</span>
+</div>
+<span class="text-gray-300 dark:text-gray-600">•</span>
+<span>Andheri West, Mumbai, Maharashtra</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex gap-2 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 text-sm font-bold hover:bg-gray-200 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-base">ios_share</span>
+<span class="truncate">Share</span>
+</button>
+<button class="flex gap-2 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 text-sm font-bold hover:bg-gray-200 dark:hover:bg-gray-700">
+<span class="material-symbols-outlined text-base">favorite</span>
+<span class="truncate">Save</span>
+</button>
+</div>
+</div>
+<!-- ImageGrid Component -->
+<div class="grid grid-cols-4 grid-rows-2 gap-2 mb-10 h-[500px] rounded-xl overflow-hidden">
+<div class="col-span-2 row-span-2 bg-center bg-no-repeat bg-cover" data-alt="Main view of the hostel room with a bed and a desk" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA7OirUwF-piUBH43Og4XHbDyxDXRKYKadJw4QdLPNOErwC1_ozRl-SDAf1fsJC0vQ1OHnAlv4D6TR7tuz7hUIWCcY5ttyj4pYJHn1EQkLfCTrL4OY2I56PJw35rLBkk7Y7vg65KeR8n130pM-jb5g1MU7Ul4l-_QAUiTUKhgawJLEv48PPfgnCH288PqbKsSt7W0F4xOyw-cPCFBZVIpN2mHPjJnBLORITsFeYIbjo9V4aPO7uNUlMZX9EISDyKkWjMOLoGYpmwCo");'></div>
+<div class="bg-center bg-no-repeat bg-cover" data-alt="Common area with sofas and a coffee table" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7Ug-Pwb-rv_aSaME8nt11F1VoHDB3tHufNCEH5u3o48V5aPoG9KwWtthplgBzBiZeBlcW6gNfFGNHG217BZcAI0Q913glkSPglihnHSAlyYjVgXyC5skgopUat9zgRcfBsrRhISY2THCsq55sPHjXo9bBCU7vlEkQmL7g5hj9vyQguMJDvQ0OCm0uEN25NJAe83WWwjYcCrEPKGpAgj1fIhGl9dPhoj9F8wftAaxRzHN9nrHkWmD5jvdUe8YfSJ7QrAtInkx4Ukc");'></div>
+<div class="bg-center bg-no-repeat bg-cover" data-alt="Clean and modern bathroom with a shower" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuATwvy-h3km1lXU42gVPFLYXb4mUjXV4s64vrToTm7hMgeNwnxPgHb2LbP0DlXcH0IIqOFjumAfKVruWyFMvXYYRj6wC7JHQ-oLrLhqsZvV_-DxjaZVcKD_tTnceopq9307nrnAKHk-tfaqfll8XU7WXltkAUD8zaRQf6Wv3G9nyal7c92o13c4qU1XynN1PyuBBHnrcFztdZEv8f-wHhUnIyINzl0ThHQUyPvvRHmgmNEM72TOOBtx4ilDdJkzhx2Fz3T6OYwjb24");'></div>
+<div class="bg-center bg-no-repeat bg-cover" data-alt="Kitchenette area with microwave and fridge" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBsFyACWoUbJeZ5nval1Gw6zwGM8ROIEfhHOflUXOV7x13jaPkN4FAVrtnm9Sri6eLqtwgap0QbZF4NYycmXT5syJkzD-PWiewSYQWAGoGSFBFdPknOknjOncSWfTwymoSFK2jvORL2DdOWjkHSBygh7CQHm3skNsCVGkSmbEs57qUWAKaQdqMLYaPpw9twAxLMrnxQS4JcXPTr7B5L2WG77D_iRdJVG8fRxq_ZfcRJvVssxCCAi37Z6ueGPm-BOeAyqjb_pAo4uzI");'></div>
+<div class="relative bg-center bg-no-repeat bg-cover" data-alt="Exterior view of the building" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAf92ctgGpbKbZzdXDYB_OxyeXEz7eMcmSwFd9NujgrDvMc6tJ9XB3S13l-LeVVicMtNZvP6Q4Nr1YCpe9vpOxTJxwTmWxap6S10eBTpspvf6XaNda6-QTmZCewjf9barm5PqhMb3TagoKPC7ywu0tFCT24priMhYvsSNo6tfGYPWfncNypFLghqMvqm8LjU5SjHUvdju13pAPiy7ySuuoyuW_4rWA3UVkF_iWNF9UWqQOKJkMAlye-SE8bAd63VkVKXSiU4JRi854");'>
+<button class="absolute inset-0 w-full h-full bg-black/30 flex items-center justify-center text-white font-bold hover:bg-black/50">
+                        Show all photos
+                    </button>
+</div>
+</div>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<!-- Left Column -->
+<div class="lg:col-span-2">
+<!-- SectionHeader & Host Info -->
+<div class="pb-6 border-b border-gray-200 dark:border-gray-700">
+<div class="flex justify-between items-center">
+<div>
+<h2 class="text-gray-900 dark:text-white text-xl font-bold">Private Room in a PG hosted by Priya</h2>
+<p class="text-gray-500 dark:text-gray-400">2-person sharing • 1 Bathroom • Kitchenette</p>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="relative">
+<div class="size-14 bg-center bg-no-repeat aspect-square bg-cover rounded-full" data-alt="Portrait of the host, Priya" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBo08JxfnZaglC82DeYAado0uRSLxU6jHtEh81P1f0P-S_mZcKKxB9NxojTQFaBIxmP-baUi28oQmeKdt3X7YXyWTkp8OFhFIrA2eE9qMnh4Xs-UGSF36vjXIoDS4RkKi0Rn3aKGOOah6xPdSHXRHPBO0lYzZBVm0K362iBcrcVoTo3qCFTPTkXilCs-O727HiYFbPU4HR096gbYLqY3Ogxy6vvb0hVBVNJMeG9hrcNbinujwBrW4xuiM6vNywKLzh5NjDJ4bMn9Rk");'></div>
+<span class="absolute bottom-0 right-0 block h-4 w-4 rounded-full bg-green-400 border-2 border-white dark:border-gray-800 ring-1 ring-green-400" title="Verified Host">
+<span class="material-symbols-outlined text-white text-[10px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">check</span>
+</span>
+</div>
+<span class="text-xs font-medium text-gray-600 dark:text-gray-300">Priya K.</span>
+</div>
+</div>
+</div>
+<!-- Amenities Section -->
+<div class="py-6 border-b border-gray-200 dark:border-gray-700">
+<h3 class="text-gray-900 dark:text-white text-xl font-bold mb-4">What this place offers</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center gap-3"><span class="material-symbols-outlined text-gray-700 dark:text-gray-300">wifi</span><span class="text-gray-600 dark:text-gray-300">High-speed Wi-Fi</span></div>
+<div class="flex items-center gap-3"><span class="material-symbols-outlined text-gray-700 dark:text-gray-300">ac_unit</span><span class="text-gray-600 dark:text-gray-300">Air Conditioning</span></div>
+<div class="flex items-center gap-3"><span class="material-symbols-outlined text-gray-700 dark:text-gray-300">restaurant</span><span class="text-gray-600 dark:text-gray-300">Daily Meals (optional)</span></div>
+<div class="flex items-center gap-3"><span class="material-symbols-outlined text-gray-700 dark:text-gray-300">local_laundry_service</span><span class="text-gray-600 dark:text-gray-300">Laundry Service</span></div>
+<div class="flex items-center gap-3"><span class="material-symbols-outlined text-gray-700 dark:text-gray-300">power</span><span class="text-gray-600 dark:text-gray-300">24/7 Power Backup</span></div>
+<div class="flex items-center gap-3"><span class="material-symbols-outlined text-gray-700 dark:text-gray-300">cleaning_services</span><span class="text-gray-600 dark:text-gray-300">Housekeeping</span></div>
+</div>
+</div>
+<!-- Location Section -->
+<div class="py-6 border-b border-gray-200 dark:border-gray-700">
+<h3 class="text-gray-900 dark:text-white text-xl font-bold mb-4">Where you'll be</h3>
+<div class="w-full h-80 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-700" data-location="Mumbai" style="https://lh3.googleusercontent.com/aida-public/AB6AXuABzRSwZ8RSEYfHspqPAMA_Em6FeFXezq8Gp7gRgMFfZgVDTlaIB32BV9WtyOPjcOIGaFx7q36EJZ_MeniaxssGUzWMANvVYBWUB9LQ6BS2V8UsLQXTdwGJmsgtvpmut411-1LsfoxHJmE4bBCaWlq_bkR99Prw66zF2XUN6JAlqBQsq-9776Aa-Y2oGaV_xN67QBFI86FH-5qld_5VzBCKgr6Chu6nihj08Axem4kQbmL2GaDn0EpXqXR65HcPK3d1oltue4Ur_sA">
+<!-- Placeholder for an interactive map -->
+<img class="w-full h-full object-cover" data-alt="A map showing the location of the property in Andheri West, Mumbai with nearby points of interest." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIdDbHOIOd6jGpqEqozxFpW7WkYAPuAQyleCC-mWOOMgGBVF_QS343iznf3IiuIR8zzD0lROaMet17t1pWLzPWJzCIeOpGOYbXQpb5CKndV5eRatYfSbztDqdtVq86-VejqFo9d1TqPy3VGOeyCB8l1GkOJW2RGMt7rh1GIO8lXAQ0RI1ZnoOhO14prv0J_kVOXkKySBgViaouBHOhfItYTtPPdkpp0W-TpesZN7ZCr3daGNcEzv4oCBtm44zTthOGR39VCBZrGC0"/>
+</div>
+</div>
+<!-- Reviews Section -->
+<div class="py-6">
+<h3 class="text-gray-900 dark:text-white text-xl font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined">star</span>
+<span>4.8 • 120 Reviews</span>
+</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 mb-6">
+<div class="flex items-center justify-between"><span class="text-gray-700 dark:text-gray-300">Cleanliness</span> <div class="w-24 h-1 bg-gray-200 dark:bg-gray-700 rounded-full"><div class="h-1 bg-gray-800 dark:bg-gray-200 rounded-full" style="width: 98%"></div></div> <span>4.9</span></div>
+<div class="flex items-center justify-between"><span class="text-gray-700 dark:text-gray-300">Location</span> <div class="w-24 h-1 bg-gray-200 dark:bg-gray-700 rounded-full"><div class="h-1 bg-gray-800 dark:bg-gray-200 rounded-full" style="width: 94%"></div></div> <span>4.7</span></div>
+<div class="flex items-center justify-between"><span class="text-gray-700 dark:text-gray-300">Value for money</span> <div class="w-24 h-1 bg-gray-200 dark:bg-gray-700 rounded-full"><div class="h-1 bg-gray-800 dark:bg-gray-200 rounded-full" style="width: 96%"></div></div> <span>4.8</span></div>
+<div class="flex items-center justify-between"><span class="text-gray-700 dark:text-gray-300">Communication</span> <div class="w-24 h-1 bg-gray-200 dark:bg-gray-700 rounded-full"><div class="h-1 bg-gray-800 dark:bg-gray-200 rounded-full" style="width: 100%"></div></div> <span>5.0</span></div>
+</div>
+<div class="space-y-6">
+<!-- Review Item -->
+<div class="flex gap-4">
+<div class="size-10 bg-center bg-no-repeat aspect-square bg-cover rounded-full flex-shrink-0" data-alt="Reviewer's profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDPRPnKbXrz1rWpcrwZL6NSqIWZdXFzmIhOc-W_I6aL9wEXaz6WKFDGsT_cPreFEUPCScCMhxnHAV8JqhMYh6zZo_DP1vZnLYNwu87SqxS_wN68CrByAfX34T1dCeUIVKfNsIUhwcYEfu6fqbEXRs1TEg8Y3MvUdMt0_QJGPyT6HJvsrWDg6rIoY9_rJdFsy05CJlE7FtalG-TVG2S7oVs9MC9Uq90MhESXLQecmNJ4j8-qa6FAtBrd8N9Lyd5WZQ167Th4oPFGEDk");'></div>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white">Rohan Sharma</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400">Software Engineer • August 2023</p>
+<p class="mt-2 text-gray-600 dark:text-gray-300">Great place for working professionals. The Wi-Fi is reliable and the location is very convenient for commuting. Priya is a wonderful host!</p>
+</div>
+</div>
+<!-- Review Item -->
+<div class="flex gap-4">
+<div class="size-10 bg-center bg-no-repeat aspect-square bg-cover rounded-full flex-shrink-0" data-alt="Reviewer's profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDa_annleYhq3pQzVfDYQ5yqFCUnpyMMGz-14tLZ_8AyzKKZUQ0mij9EGFN8FMONU_aADHnkbTEUhJfUaJ1JyWZp7kFjaE_t0pKnRewho3GyoH3Kzf9BNzkleR-NADFPq6lXRBmHb_85FMdOqJyRHs8VgsmOXLq_roCXaMocR_Jff4ZH_j22LFE7vsVLsI5bCzuG7kw9CoGTko_t4cAXw378mGsInG8o9Xy3IlcjQkDqvCTB53j_FVlqISYKcQVLTR1MO_lXmcKl58");'></div>
+<div>
+<h4 class="font-bold text-gray-900 dark:text-white">Anjali Mehta</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400">Student • July 2023</p>
+<p class="mt-2 text-gray-600 dark:text-gray-300">The PG is very clean and well-maintained. The food is homely. Safe for students and close to my college.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column (Sticky Booking Card) -->
+<div class="lg:col-span-1">
+<div class="sticky top-24 p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg">
+<p class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                            ₹15,000 <span class="text-base font-normal text-gray-500 dark:text-gray-400">/ month</span>
+</p>
+<div class="space-y-4">
+<button class="w-full flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-primary text-white text-base font-bold hover:bg-primary/90 transition-colors">
+<span>Request to Book</span>
+</button>
+<button class="w-full flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-base font-bold hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+<span>Contact Owner</span>
+</button>
+</div>
+<p class="text-xs text-center text-gray-500 dark:text-gray-400 mt-4">You won't be charged yet</p>
+<div class="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700 space-y-3">
+<div class="flex justify-between items-center text-sm">
+<span class="text-gray-600 dark:text-gray-300">Security Deposit</span>
+<span class="font-medium text-gray-800 dark:text-gray-100">₹15,000</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-gray-600 dark:text-gray-300">Service Fee</span>
+<span class="font-medium text-gray-800 dark:text-gray-100">₹500</span>
+</div>
+<div class="flex justify-between items-center font-bold text-base pt-3 border-t border-gray-200 dark:border-gray-700 mt-3">
+<span class="text-gray-900 dark:text-white">Total first month</span>
+<span class="text-gray-900 dark:text-white">₹30,500</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

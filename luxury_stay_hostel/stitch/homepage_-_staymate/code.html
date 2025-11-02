@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StayFinder - Find Your Community. Find Your Home.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#2b9dee",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101a22",
+              "orange-accent": "#FFA500",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111518] dark:text-gray-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col font-display group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col w-full max-w-6xl flex-1 px-4 sm:px-6 lg:px-8">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-gray-700 px-4 md:px-10 py-3">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-[#111518] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">StayFinder</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-[#111518] dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="#">List a Property</a>
+<a class="text-[#111518] dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal" href="#">Help</a>
+</div>
+<div class="flex gap-2">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Sign Up</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gray-200 dark:bg-gray-800 text-[#111518] dark:text-gray-200 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors">
+<span class="truncate">Log In</span>
+</button>
+</div>
+</div>
+<div class="md:hidden">
+<button class="p-2 rounded-lg bg-gray-200 dark:bg-gray-800">
+<span class="material-symbols-outlined text-[#111518] dark:text-gray-200">menu</span>
+</button>
+</div>
+</header>
+<!-- HeroSection -->
+<main class="flex flex-col gap-10 md:gap-16">
+<div class="@container mt-5">
+<div class="@[480px]:p-0">
+<div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4 text-center" data-alt="Vibrant, modern co-living space with young people interacting" style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBT9ls834uSRBR6QcNga1tnsjJUI6lNVrObMuhyG9Etwl-O559TpoWZxFYWU9pz_BCRxAxfIssOFk6_CRuHJ6vIAcJebgkGLmqSv7qwXc5UiJ7mvE0c-Za8c0X-TeifdaEJNUjQl-2otWoOCQpqFswA2tJYgWryrpl__NCX36YT60bsqfRTjI6eWwcmDawhrBfiK3VfLekfyYXtGMh3Kv_4EiZ6gx5-q5thDBBShXVYQEORIn5eKHmFsNsgM0pRTwRswMMcurO3a-Q");'>
+<div class="flex flex-col gap-2">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+                                            Find Your Community. Find Your Home.
+                                        </h1>
+<h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal max-w-2xl mx-auto">
+                                            Budget-friendly hostels and PGs for students and professionals. Book your perfect stay today.
+                                        </h2>
+</div>
+</div>
+</div>
+</div>
+<!-- Search Bar with Chips -->
+<div class="-mt-24 z-10 px-4">
+<div class="max-w-4xl mx-auto bg-background-light dark:bg-background-dark p-4 rounded-xl shadow-lg border border-gray-200 dark:border-gray-800">
+<div class="flex flex-col md:flex-row items-center gap-3 w-full">
+<div class="flex items-center gap-2 p-3 bg-gray-100 dark:bg-gray-800/50 rounded-lg flex-1 w-full">
+<span class="material-symbols-outlined text-gray-500">search</span>
+<input class="w-full bg-transparent focus:outline-none text-[#111518] dark:text-gray-200 placeholder-gray-500" placeholder="Enter a city or area" type="text"/>
+</div>
+<div class="flex gap-3 flex-wrap justify-center w-full md:w-auto">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-gray-200 dark:bg-gray-800 px-4">
+<p class="text-[#111518] dark:text-gray-200 text-sm font-medium leading-normal">Stay Type</p>
+<span class="material-symbols-outlined text-[#111518] dark:text-gray-200">expand_more</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-gray-200 dark:bg-gray-800 px-4">
+<p class="text-[#111518] dark:text-gray-200 text-sm font-medium leading-normal">Price Range</p>
+<span class="material-symbols-outlined text-[#111518] dark:text-gray-200">expand_more</span>
+</button>
+</div>
+<button class="flex w-full md:w-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Search</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Featured Listings -->
+<section>
+<h2 class="text-[#111518] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Explore Our Top-Rated Properties</h2>
+<div class="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex items-stretch p-4 gap-4">
+<div class="flex h-full flex-1 flex-col gap-3 rounded-lg min-w-64">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg flex flex-col" data-alt="Modern hostel dorm room with bunk beds" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCU1Drh0rqdaWUHOGHsHiICFNbnQ0H-NW87EoE509p4WlCwhzCza6V8w2-eZdwgtmMOs8WFkwyXexpW2W2FLiQrYP_Hj3sc7MPe_kBFXQO9ld93fHFMe10GhDCmKc2C5adjSIlptWQmhqBsRmFL49gh81JsHhmJUhmxV5-CH-hUdca1QnVE-tZ1OY_qC10ltuMqxTIvsrgjy5CPNW-rWTPMYJsyf_Y_tcZFdOJA670eVebLgbWNqXMN4w-oUSRBbx76oME7uzHZN4U");'></div>
+<div>
+<div class="flex justify-between items-center">
+<p class="text-[#111518] dark:text-white text-base font-bold leading-normal">Urban Nest Hostel</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-orange-accent text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-medium">4.8</span>
+</div>
+</div>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">Downtown, Delhi - ₹8,000/month</p>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-3 rounded-lg min-w-64">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg flex flex-col" data-alt="Cozy private room in a co-living PG" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC13YHX1O7VrmIU0suwYrYDLyNdFU-AwhzuI9dsDtO4Ni94PNefqgRTS7c-9SOPquiOIpp7stJSrsn08xMpKcYKz0wRSDFJI8-8NF2bAH85-y2MDp3ZbRupw-NSltq0731GNIhCdH2QW5eC-4NZQ1q7YgTWhXJJPba2JIMVPEt9XCXljIpOXHrfkORyrIKR0pqttFy9d42_jWkuzE8DHne47Uv_-fsB7xHcanLu7YgXsGq5IfzERgs9RMgoT_803jvEzWd01dP6UV4");'></div>
+<div>
+<div class="flex justify-between items-center">
+<p class="text-[#111518] dark:text-white text-base font-bold leading-normal">Pro Co-Living PG</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-orange-accent text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-medium">4.9</span>
+</div>
+</div>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">Koramangala, Bangalore - ₹15,000/month</p>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-3 rounded-lg min-w-64">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg flex flex-col" data-alt="Bright and airy common area of a city stay" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDh4v9rXBs1WetudUp9GahAHSn1jr_6b7phMl_qXmQZ-TSOLJ-pXvI2B_tiX_pfxSs4UoNjS_mpLt5i-MQ9VBokS2pJyuw_ShMPUxg03cHNmjD1hZhWqiYs7Hm58i-ej6n4vop4fIjkxocxAoWRntqx9muuaKLJFseq7uU317pYv9ADr-Y6vrTfgo2VFyAXpu-Y5meA8uEDgdboc-ZEqb0YSmQmn9t9ZarQYQox89zJgg8NJtA2GkdADp1kozqusdXdBYUu-VrQTZ8");'></div>
+<div>
+<div class="flex justify-between items-center">
+<p class="text-[#111518] dark:text-white text-base font-bold leading-normal">City Central Stays</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-orange-accent text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-medium">4.7</span>
+</div>
+</div>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">Bandra, Mumbai - ₹12,000/month</p>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-3 rounded-lg min-w-64">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg flex flex-col" data-alt="A study area in a student hub" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCgHfvAXaotxry85YE0IVAGIlKjOxpVmG5iauywfxW0tsrZS0hElfZU54KnwV5zXs5T2kdObQvx0GzzDWW_gIS3lSBf1J-H4Vt6qCRZE-G9_hYf1EV_qwum-Ui7VHw6ola0JK3yYIiwZeixCJ-nOhRdV0TDymYskqxqqp3qJY93T2T8sA5706drjDSDPy4TtGwsgQDUwC8z8Y-yfmhlXihluzFD807WGKRwDId-vwPCUjdAFZSi5ZaHZKFYqmVk2LrpG7BDRMciZCY");'></div>
+<div>
+<div class="flex justify-between items-center">
+<p class="text-[#111518] dark:text-white text-base font-bold leading-normal">The Student Hub</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-orange-accent text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-medium">4.8</span>
+</div>
+</div>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal">Hinjewadi, Pune - ₹9,500/month</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Proposition Section -->
+<section class="p-4">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+<div class="flex flex-col items-center gap-3">
+<div class="flex items-center justify-center size-12 rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+<h3 class="font-bold text-lg text-[#111518] dark:text-white">Verified Stays</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm">Every property is manually verified by our team to ensure quality and safety for your peace of mind.</p>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="flex items-center justify-center size-12 rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">credit_card</span>
+</div>
+<h3 class="font-bold text-lg text-[#111518] dark:text-white">Secure Payments</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm">Your booking and payment history, all in one place. Pay securely through our encrypted platform.</p>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="flex items-center justify-center size-12 rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<h3 class="font-bold text-lg text-[#111518] dark:text-white">Vibrant Community</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm">Connect with like-minded students and professionals. Join events and build your network.</p>
+</div>
+</div>
+</section>
+<!-- Testimonial Section -->
+<section class="bg-gray-100 dark:bg-gray-900/50 py-12 md:py-20 rounded-xl">
+<div class="max-w-4xl mx-auto px-4 text-center">
+<h2 class="text-[#111518] dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] mb-8">Hear from our Community</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-background-light dark:bg-background-dark p-6 rounded-lg shadow-sm text-left flex flex-col">
+<div class="flex items-center gap-4 mb-4">
+<img alt="Portrait of Rohan Sharma" class="w-14 h-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB71zZ2niCwr1eHdZ-9U4g1NXVWYwBN-ius2-nsjy18mrwwDRCU7nUfzoEGSzj8NcNfBhFZ86lvxoCA9XdtSeV3YW_Z4dAsuoWODueLIt8rZXQgta4lymu0mVPH7eBEZviQ-vZ8939xBC6rIFfMR76PZhzCHYgqv5Uvkn3zq3XJn6ryTZYZ_YoeNSh30vCbSxRaTmvHhQ_YEYRH-TXiutaufuXG5PwlUygZuxrC055rjhPa1-gOjDBiJDJnbVJhwFvshv-eq2HKedc"/>
+<div>
+<p class="font-bold text-[#111518] dark:text-white">Rohan Sharma</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">Software Engineer</p>
+</div>
+</div>
+<p class="text-gray-700 dark:text-gray-300 mb-4 flex-grow">"Finding a good PG in Bangalore was a nightmare until I found StayFinder. The process was so simple and the property was exactly as advertised. Highly recommend!"</p>
+<div class="flex items-center gap-1 text-orange-accent">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-6 rounded-lg shadow-sm text-left flex flex-col">
+<div class="flex items-center gap-4 mb-4">
+<img alt="Portrait of Priya Mehta" class="w-14 h-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk0ry2qPtRRG3cgRCm7lWBThAeSO0OR5DKt1O6PcWTq09yC6wfceh8zsvhis0MMcJaZ1bHSPAh8MiMpp_j_0PvYyPRNa_9UK4xH8N1oM6NiPLSMhQqTgJeEVv3ovRqHbrOahoO2JsIfZheSMd_U-3bVYzf9BOAju8UWLoFEoorhFtHNEFGGUGsjWDMmj3lRTYiPpJSqAVt3xuTTdzQTuON75yg8XtzBZEj6o-GTFZNYiafAqazpuBQL8NCxFMyKGVu8bAa35lggJE"/>
+<div>
+<p class="font-bold text-[#111518] dark:text-white">Priya Mehta</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">University Student</p>
+</div>
+</div>
+<p class="text-gray-700 dark:text-gray-300 mb-4 flex-grow">"As a student, safety was my top priority. StayFinder's verified listings gave me and my parents peace of mind. The community events are a great bonus!"</p>
+<div class="flex items-center gap-1 text-orange-accent">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="p-4 text-center">
+<div class="bg-primary/10 dark:bg-primary/20 rounded-xl p-8 md:p-12 flex flex-col items-center gap-4">
+<h2 class="text-2xl md:text-3xl font-bold text-[#111518] dark:text-white">Earn by Listing Your Property</h2>
+<p class="max-w-xl text-gray-600 dark:text-gray-300">Join our community of hosts and turn your extra space into a reliable income stream. We make it easy and secure.</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-orange-accent text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-orange-accent/90 transition-colors mt-2">
+<span class="truncate">Get Started</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="mt-16 border-t border-gray-200 dark:border-gray-800 pt-10 pb-6">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div>
+<h4 class="font-bold text-[#111518] dark:text-white mb-3">StayFinder</h4>
+<ul class="space-y-2">
+<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary" href="#">About Us</a></li>
+<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Careers</a></li>
+<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Press</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-[#111518] dark:text-white mb-3">Discover</h4>
+<ul class="space-y-2">
+<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Trust &amp; Safety</a></li>
+<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Travel Credit</a></li>
+<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Community Events</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-[#111518] dark:text-white mb-3">Hosting</h4>
+<ul class="space-y-2">
+<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary" href="#">List your property</a></li>
+<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Host Responsibly</a></li>
+<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Community Center</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-[#111518] dark:text-white mb-3">Support</h4>
+<ul class="space-y-2">
+<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Help Center</a></li>
+<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Contact Us</a></li>
+<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Cancellation options</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-10 pt-6 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+<p>© 2024 StayFinder, Inc. All rights reserved.</p>
+<div class="flex gap-4 mt-4 md:mt-0">
+<a class="hover:text-primary" href="#">Privacy</a>
+<a class="hover:text-primary" href="#">Terms</a>
+<a class="hover:text-primary" href="#">Sitemap</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</body></html>
